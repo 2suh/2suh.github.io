@@ -1,56 +1,234 @@
 ---
+layout: single
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: ""
 author_profile: true
+toc: false
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+<style>
+  html { scroll-behavior: smooth; }
+  .section-anchor { scroll-margin-top: 90px; }
+  .section-divider { margin: 2.2rem 0; }
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+  .page__content {
+    max-width: 1080px;
+  }
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+  /* Profile */
+  .author__avatar img {
+    max-width: 110px;
+    height: auto;
+  }
+  .sidebar {
+    margin-top: 1.5rem;
+  }
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+  /* Link */
+  .about-link {
+    color: #243c8f;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .about-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+  /* Dates */
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  .item-title {
+    font-weight: 600;
+  }
+  .item-date {
+    font-size: 0.9em;
+    color: #555;
+    white-space: nowrap;
+  }
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+  /* Publications typography tuning */
+  .pub-title a {
+    text-decoration: none;
+    color: #243c8f;
+    font-weight: 700;
+  }
+  .pub-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .pub-authors {
+    font-size: 0.9em;
+    color: #555;
+    display: block;
+    margin-top: 0.25rem;
+    padding-left: 0.2rem;
+  }
+  .pub-venue {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    display: block;
+    margin-top: 0.2rem;
+    padding-left: 0.2rem;
+  }
+</style>
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+## About
+{: #about .section-anchor}
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+I am a Ph.D. student in 
+<a href="LAB_URL" class="about-link" target="_blank" rel="noopener noreferrer">**HPCP Lab**</a> 
+at the Department of Computer Science, Yonsei University, under the supervision of 
+<a href="PROF_URL" class="about-link" target="_blank" rel="noopener noreferrer">**Prof. Youngsok Kim**</a>.
 
-**Markdown generator**
+<div class="section-divider"></div>
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+## Research Interests
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+- System Software and Computer Architecture
+- Hardware-Software Co-Design for Emerging Hardware 
+- Hardware-Accelerated Database Management Systems
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+<div class="section-divider"></div>
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+## Education
+{: #education .section-anchor}
+
+- <div class="item-row">
+    <span class="item-title">Yonsei University</span>
+    <span class="item-date">Mar. 2022 – Present</span>
+  </div>
+  - Ph.D. in Computer Science
+
+- <div class="item-row">
+    <span class="item-title">Yonsei University</span>
+    <span class="item-date">Mar. 2017 – Feb. 2022</span>
+  </div>
+  - B.S. in Computer Science
+
+<div class="section-divider"></div>
+
+
+## Publication
+{: #publications .section-anchor}
+
+- **FaScalSQL: A Fast and Scalable GPU-Accelerated SQL Query Engine for Out-of-Memory Tables**
+  <span class="pub-authors">
+  Chaemin Lim, **Suhyun Lee**, Jinwoo Choi, Kwanghyun Park, Jinho Lee, Joonsung Kim, and Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  42nd IEEE International Conference on Data Engineering (**ICDE**), May 2026 (to appear)
+  </span>
+
+- <span class="pub-title">**<a href="https://ieeexplore.ieee.org/abstract/document/11282501" target="_blank" rel="noopener noreferrer">
+  DMO-DB: Mitigating the Data Movement Bottlenecks of GPU-Accelerated Relational OLAP
+</a>**</span>
+  <span class="pub-authors">
+  Chaemin Lim, **Suhyun Lee**, Jinwoo Choi, Joonsung Kim, Jinho Lee, Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  34th International Conference on Parallel Architectures and Compilation Techniques (**PACT**), Nov. 2025
+  </span>
+
+- <span class="pub-title">**<a href="https://dl.acm.org/doi/abs/10.1145/3698827" target="_blank" rel="noopener noreferrer">
+  SPID-Join: A Skew-resistant Processing-in-DIMM Join Algorithm Exploiting the Bank-and Rank-level Parallelisms of DIMMs
+</a>**</span>
+  <span class="pub-authors">
+  **Suhyun Lee**, Chaemin Lim, Jinwoo Choi, Heelim Choi, Chan Lee, Yongjun Park, Kwanghyun Park, Hanjun Kim, Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  2025 ACM International Conference on Management of Data (**SIGMOD**), Jun. 2025
+  </span>
+
+- <span class="pub-title">**<a href="https://dl.acm.org/doi/abs/10.1145/3589258" target="_blank" rel="noopener noreferrer">
+  Design and Analysis of a Processing-in-DIMM Join Algorithm: A Case Study with UPMEM DIMMs
+</a>**</span>
+  <span class="pub-authors">
+  Chaemin Lim, **Suhyun Lee**, Jinwoo Choi, Jounghoo Lee, Seongyeon Park, Hanjun Kim, Jinho Lee, Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  2023 ACM International Conference on Management of Data (**SIGMOD**), Jun. 2023
+  </span>
+
+- <span class="pub-title">**<a href="https://dl.acm.org/doi/abs/10.1145/3528535.3531513" target="_blank" rel="noopener noreferrer">
+  GuardiaNN: Fast and Secure On-Device Inference in TrustZone Using Embedded SRAM and Cryptographic Hardware
+</a>**</span>
+  <span class="pub-authors">
+  Jinwoo Choi, Jaeyeon Kim, Chaemin Lim, **Suhyun Lee**, Jinho Lee, Dokyung Song, Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  23rd ACM/IFIP International Middleware Conference (**Middleware**), Nov. 2022
+  </span>
+
+- <span class="pub-title">**<a href="https://dl.acm.org/doi/abs/10.1145/3470496.3527384" target="_blank" rel="noopener noreferrer">
+  GCoM: a detailed GPU core model for accurate analytical modeling of modern GPUs
+</a>**</span>
+  <span class="pub-authors">
+  Jounghoo Lee, Yeonan Ha, **Suhyun Lee**, Jinyoung Woo, Jinho Lee, Hanhwi Jang, Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  49th IEEE/ACM International Symposium on Computer Architecture (**ISCA**), Jun. 2022
+  </span>
+
+<div class="section-divider"></div>
+
+
+## Awards
+{: #awards .section-anchor}
+
+- <div class="item-row">
+    <span class="item-title">NRF Doctoral Research Fellowship</span>
+    <span class="item-date">Sep. 2024 - Aug. 2026</span>
+  </div>
+
+<div class="section-divider"></div>
+
+
+## Projects
+{: #projects .section-anchor}
+
+- **Optimizing Database Systems Using Processing-in-DIMM Hardware**
+  - National Research Foundation of Korea (NRF)
+
+- **Exploring Quality-Aware Neural Network Scheduling**
+  - LG Electronics
+
+<div class="section-divider"></div>
+
+
+## Experiences
+{: #experiences .section-anchor}
+
+- **Teaching Assistant**
+  - <div class="item-row">
+      CSI3102: Computer Architecture
+      <span class="item-date">2023S</span>
+    </div>
+
+  - <div class="item-row">
+      CSI2111: Logic Circuit Design
+      <span class="item-date">2022F</span>
+    </div>
+
+  - <div class="item-row">
+      CSI4109: Information Security
+      <span class="item-date">2022S</span>
+    </div>
+
+<div class="section-divider"></div>
+
+## Contact
+{: #contact .section-anchor}
+
+- **Email Address**
+  - su_hyun@yonsei.ac.kr
+
+<div class="section-divider"></div>
