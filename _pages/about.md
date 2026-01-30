@@ -198,7 +198,7 @@ at the Department of Computer Science, Yonsei University, under the supervision 
 - **Optimizing Database Systems Using Processing-in-DIMM Hardware**
   - National Research Foundation of Korea (NRF)
 
-- **Exploring Quality-Aware Neural Network Scheduling**
+- **Exploring Quality-Aware NN Scheduler**
   - LG Electronics
 
 <div class="section-divider"></div>
