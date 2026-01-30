@@ -85,9 +85,9 @@ redirect_from:
 {: #about .section-anchor}
 
 I am a Ph.D. student in 
-<a href="LAB_URL" class="about-link" target="_blank" rel="noopener noreferrer">**HPCP Lab**</a> 
+<a href="https://yonsei-hpcp.github.io/" class="about-link" target="_blank" rel="noopener noreferrer">**HPCP Lab**</a> 
 at the Department of Computer Science, Yonsei University, under the supervision of 
-<a href="PROF_URL" class="about-link" target="_blank" rel="noopener noreferrer">**Prof. Youngsok Kim**</a>.
+<a href="https://youngsok.github.io/" class="about-link" target="_blank" rel="noopener noreferrer">**Prof. Youngsok Kim**</a>.
 
 <div class="section-divider"></div>
 
