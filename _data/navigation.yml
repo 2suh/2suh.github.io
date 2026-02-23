@@ -11,17 +11,11 @@ main:
   - title: "About"
     url: /#about
 
-  - title: "Education"
-    url: /#education
-
   - title: "Publications"
     url: /#publications
     
   - title: "Awards"
     url: /#awards
-        
-  - title: "Projects"
-    url: /#projects
 
   - title: "Experiences"
     url: /#experiences
