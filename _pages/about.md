@@ -120,12 +120,22 @@ at the Department of Computer Science, Yonsei University, under the supervision 
 ## Publication
 {: #publications .section-anchor}
 
-- **FaScalSQL: A Fast and Scalable GPU-Accelerated SQL Query Engine for Out-of-Memory Tables**
+- **RecoNN: A Resource Contention-Aware Runtime for Latency-Sensitive On-Device Inference**
+  <span class="pub-authors">
+  Jinwoo Choi, **Suhyun Lee**, and Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  44th IEEE International Conference on Computer Design (**ICCD**), Nov. 2026 (to appear)
+  </span>
+
+- <span class="pub-title">**<a href="https://ieeexplore.ieee.org/abstract/document/11629529" target="_blank" rel="noopener noreferrer">
+  FaScalSQL: A Fast and Scalable GPU-Accelerated SQL Query Engine for Out-of-Memory Tables
+</a>**</span>
   <span class="pub-authors">
   Chaemin Lim, **Suhyun Lee**, Jinwoo Choi, Kwanghyun Park, Jinho Lee, Joonsung Kim, and Youngsok Kim
   </span>
   <span class="pub-venue">
-  42nd IEEE International Conference on Data Engineering (**ICDE**), May 2026 (to appear)
+  42nd IEEE International Conference on Data Engineering (**ICDE**), May 2026
   </span>
 
 - <span class="pub-title">**<a href="https://ieeexplore.ieee.org/abstract/document/11282501" target="_blank" rel="noopener noreferrer">
