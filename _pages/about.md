@@ -120,6 +120,14 @@ at the Department of Computer Science, Yonsei University, under the supervision 
 ## Publication
 {: #publications .section-anchor}
 
+- **GJP: Fast and Efficient Join-Project Query Processing on GPUs Using Density-Aware Matrix Multiplication**
+  <span class="pub-authors">
+  Sungchul Lee, **Suhyun Lee**, Hanna Cha, Chaemin Lim, and Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  2027 ACM International Conference on Management of Data (**SIGMOD**), Jun. 2027 (to appear)
+  </span>
+
 - **RecoNN: A Resource Contention-Aware Runtime for Latency-Sensitive On-Device Inference**
   <span class="pub-authors">
   Jinwoo Choi, **Suhyun Lee**, and Youngsok Kim
