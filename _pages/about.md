@@ -120,6 +120,14 @@ at the Department of Computer Science, Yonsei University, under the supervision 
 ## Publication
 {: #publications .section-anchor}
 
+- **MEPID-Join: Scaling Processing-in-DIMM Joins Using Adaptive Key-Level Replication**
+  <span class="pub-authors">
+  **Suhyun Lee**, Hanna Cha, Chaemin Lim, Hanjun Kim, and Youngsok Kim
+  </span>
+  <span class="pub-venue">
+  53rd International Conference on Very Large Data Bases (**VLDB**), Aug. 2027 (to appear)
+  </span>
+
 - **GJP: Fast and Efficient Join-Project Query Processing on GPUs Using Density-Aware Matrix Multiplication**
   <span class="pub-authors">
   Sungchul Lee, **Suhyun Lee**, Hanna Cha, Chaemin Lim, and Youngsok Kim
